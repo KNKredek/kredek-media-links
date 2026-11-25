@@ -1,0 +1,203 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Inter", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#background {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(200deg, #221c38, #490121);
+}
+#pattern {
+  position: fixed;
+  inset: 0;
+  background-image:
+    url(/kredka_jedna_background.svg), url(/kredka_jedna_background.svg);
+
+  background-size: 100px 150px;
+  background-position:
+    0 0,
+    45px 75px;
+  opacity: 0.1;
+}
+#wrapper {
+  position: relative;
+  width: 550px;
+  max-width: 100%;
+  margin: 120px auto 40px;
+  background-color: #f6f4f7;
+  border-radius: 24px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+#circle-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f6f4f7;
+  border-radius: 50%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px 0px;
+  /* background-color: red; */
+}
+h1 {
+  width: min-content;
+  margin: auto;
+}
+h2,
+p {
+  text-align: center;
+  margin: 8px 48px;
+}
+h2 {
+  color: #eb524a;
+  margin: 0;
+}
+p {
+  color: #2f2561;
+  font-size: 16px;
+}
+/* #look {
+  padding: 24px;
+} */
+.links {
+  margin: 16px;
+  padding: 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+a {
+  display: block;
+  position: relative;
+  width: min-content;
+  height: 60px;
+  transition: all 0.3s;
+}
+a span {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - 30px), -50%);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  z-index: 1;
+  transition:
+    transform 0.3s,
+    filter 0.3s;
+}
+a svg {
+  transition:
+    transform 0.3s,
+    filter 0.3s;
+}
+.rotate {
+  margin-left: auto;
+}
+.rotate svg {
+  rotate: 180deg;
+}
+.rotate span {
+  transform: translate(calc(-50% + 30px), -50%);
+}
+
+a:hover svg {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+}
+a:hover span {
+  transform: translate(calc(-50% - 30px), calc(-50% - 2px));
+  filter: brightness(0.95);
+}
+.rotate:hover svg {
+  transform: translateY(2px);
+}
+.rotate:hover span {
+  transform: translate(calc(-50% + 30px), calc(-50% - 2px));
+}
+
+@media screen and (max-width: 550px) {
+  body {
+    justify-content: flex-end;
+  }
+  #wrapper {
+    margin: 120px 0 0;
+    padding-top: 70px;
+    border-radius: 0;
+  }
+  h1 img {
+    height: 52px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+    margin: 16px;
+  }
+  .links {
+    max-width: 300px;
+    margin: 36px auto;
+    padding: 0px;
+  }
+  #circle-logo {
+    height: 150px;
+    width: 150px;
+  }
+
+  a svg {
+    height: 50px;
+  }
+  a {
+    display: block;
+    position: relative;
+    width: min-content;
+    height: 50px;
+  }
+  a:active {
+    border: none;
+    text-decoration: none;
+    text-transform: none;
+  }
+  a span {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% - 25px), -50%);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    z-index: 1;
+  }
+  .rotate {
+    margin-left: auto;
+  }
+  .rotate svg {
+    rotate: 180deg;
+  }
+  .rotate span {
+    transform: translate(calc(-50% + 25px), -50%);
+  }
+}
